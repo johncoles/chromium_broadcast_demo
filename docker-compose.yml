@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  chromeium-broadcast-demo:
+    container_name: chromeium-broadcast-demo
+    build: .
+    ports:
+      - "80:5000"
+    command: "http://127.0.0.1:5000/broadcast.html rtmp://rtmp.example.com/live/demo"
