@@ -6,6 +6,8 @@ RUN apt-get update && \
     apt-get update && \
     apt-get install -y ffmpeg chromium-browser alsa-utils pulseaudio xvfb python3 python3-pip
 
+RUN pip3 install --upgrade pip
+RUN pip3 install --upgrade setuptools
 RUN pip3 install Flask Flask-Sockets
 RUN echo "pcm.default pulse\nctl.default pulse" > .asoundrc
 
